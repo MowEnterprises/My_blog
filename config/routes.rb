@@ -1,8 +1,13 @@
 MyBlog::Application.routes.draw do
-  resources :comments
+  resources :posts do
+   resources :comments
+  end
 
-  resources :posts
-
+  #resources :posts, :has_many => :comments
+  #match ':controller/:action/:id'
+  #match ':controller/:action/:id.:format'
+  root :to => "post#index"
+end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -59,11 +64,11 @@ MyBlog::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-end
 
-ActionController::Routing::Routes.draw do |map|
-   map.resources :posts, :has_many=> :comments
-   map.connect ':controller/:action/:id'
-   map.connect ':controller/:action/:id.:format'
-   map.root :controller => "post"
-end
+#The lines below were commented out because it is obsolete code
+#ActionController::Routing::Routes.draw do |map|
+#   map.resources :posts, :has_many=> :comments
+#   map.connect ':controller/:action/:id'
+#   map.connect ':controller/:action/:id.:format'
+#   map.root :controller => "post"
+#end
