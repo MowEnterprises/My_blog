@@ -318,11 +318,28 @@ p { margin: 0 0 16px; color: var(--text-muted); }
 
 .signature {
   margin-top: 28px;
-  padding-top: 20px;
+  padding-top: 24px;
   border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sig-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 3px;
+  background: var(--gradient);
+  flex-shrink: 0;
+}
+
+.sig-text {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  margin: 0;
 }
 
 .sig-name {
