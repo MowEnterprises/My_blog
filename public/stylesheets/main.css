@@ -317,20 +317,20 @@ p { margin: 0 0 16px; color: var(--text-muted); }
 }
 
 .signature {
-  margin-top: 28px;
-  padding-top: 24px;
+  margin-top: 32px;
+  padding-top: 28px;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .sig-photo {
-  width: 64px;
-  height: 64px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  padding: 3px;
+  padding: 5px;
   background: var(--gradient);
   flex-shrink: 0;
 }
@@ -338,9 +338,12 @@ p { margin: 0 0 16px; color: var(--text-muted); }
 .sig-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   margin: 0;
 }
+
+.sig-text .sig-name { font-size: 1.3rem; }
+.sig-text .sig-title { font-size: 0.95rem; }
 
 .sig-name {
   font-weight: 800;
